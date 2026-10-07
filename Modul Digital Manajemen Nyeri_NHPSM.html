@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyeri Terkendali: Panduan Pain Self-Management Holistik untuk Pasien Kanker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#F4F7F4',
+                            100: '#E2EBE2',
+                            200: '#C5D8C5',
+                            500: '#739573',
+                            600: '#5A7A5A',
+                            700: '#445D44',
+                        },
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#F7F4EB',
+                            200: '#EFEAE0',
+                        },
+                        warm: {
+                            500: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F7F4EB;
+            color: #2D3748;
+        }
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-gray-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-sage-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <div class="bg-sage-500 text-white p-2.5 rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-hands-holding-child text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-sage-700">Nyeri Terkendali</h1>
+                    <p class="text-xs text-gray-500">Pain Self-Management Holistik Pasien Kanker</p>
+                </div>
+            </div>
+            <nav class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+                <button onclick="switchTab('home')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium bg-sage-500 text-white shadow-sm flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </button>
+                <button onclick="switchTab('intro')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-sage-700 hover:bg-sage-100 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> Pengantar
+                </button>
+                <button onclick="switchTab('fisik')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-sage-700 hover:bg-sage-100 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-heart-pulse"></i> Fisik
+                </button>
+                <button onclick="switchTab('psikologis')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-sage-700 hover:bg-sage-100 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-brain"></i> Psikologis
+                </button>
+                <button onclick="switchTab('sosial')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-sage-700 hover:bg-sage-100 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-users"></i> Sosial & Gaya Hidup
+                </button>
+                <button onclick="switchTab('spiritual')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-sage-700 hover:bg-sage-100 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-seedling"></i> Spiritual
+                </button>
+                <button onclick="switchTab('darurat')" class="nav-btn px-3 py-1.5 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50 flex items-center gap-1.5 whitespace-nowrap border border-red-200">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Darurat
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+
+        <!-- TAB 1: HOME / HERO SECTION -->
+        <section id="tab-home" class="tab-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-sage-100">
+                <div class="space-y-6">
+                    <span class="inline-flex items-center gap-2 bg-sage-100 text-sage-700 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full">
+                        <i class="fa-solid fa-circle-check text-sage-600"></i> Pendekatan Menyeluruh & Aman
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-sage-700 leading-tight">
+                        Anda Tidak Sendirian Menghadapi Nyeri Kanker.
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                        Modul digital holistik ini dirancang untuk membimbing Anda dan keluarga mengelola nyeri secara mandiri di rumah melalui perawatan fisik, ketenangan mental, dukungan sosial, dan spiritual.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="switchTab('intro')" class="bg-sage-600 hover:bg-sage-700 text-white font-semibold px-6 py-3 rounded-2xl shadow-md transition flex items-center gap-2 text-base">
+                            Mulai Belajar Sekarang <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button onclick="switchTab('darurat')" class="bg-red-50 hover:bg-red-100 text-red-700 font-semibold px-6 py-3 rounded-2xl border border-red-200 transition flex items-center gap-2 text-base">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Info Darurat
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Suasana Tenang dan Perawatan Holistik" class="rounded-2xl shadow-md w-full h-[320px] object-cover" onerror="this.src='https://placehold.co/600x400/E2EBE2/445D44?text=Perawatan+Holistik'">
+                    <div class="absolute -bottom-4 -left-4 bg-cream-50 p-4 rounded-2xl shadow-lg border border-sage-100 max-w-xs hidden sm:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-sage-500 text-white p-2.5 rounded-xl">
+                                <i class="fa-solid fa-heart text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-800">Pain is Manageable</h4>
+                                <p class="text-xs text-gray-500">Nyeri kanker sangat bisa diredakan dan dikontrol.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div onclick="switchTab('intro')" class="bg-white p-6 rounded-2xl shadow-sm border border-sage-100 hover:shadow-md transition cursor-pointer group">
+                    <div class="w-12 h-12 bg-sage-100 text-sage-600 rounded-xl flex items-center justify-center mb-4 text-xl group-hover:bg-sage-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-sage-700 mb-2">1. Pengantar & Skala Nyeri</h3>
+                    <p class="text-sm text-gray-600">Pahami apa itu nyeri kanker, mitos vs fakta, serta ukur skala nyeri Anda hari ini.</p>
+                </div>
+                <div onclick="switchTab('fisik')" class="bg-white p-6 rounded-2xl shadow-sm border border-sage-100 hover:shadow-md transition cursor-pointer group">
+                    <div class="w-12 h-12 bg-sage-100 text-sage-600 rounded-xl flex items-center justify-center mb-4 text-xl group-hover:bg-sage-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-sage-700 mb-2">2. Dimensi Fisik</h3>
+                    <p class="text-sm text-gray-600">Manajemen obat analgetik, posisi tubuh nyaman, dan penanganan fisik pendukung.</p>
+                </div>
+                <div onclick="switchTab('psikologis')" class="bg-white p-6 rounded-2xl shadow-sm border border-sage-100 hover:shadow-md transition cursor-pointer group">
+                    <div class="w-12 h-12 bg-sage-100 text-sage-600 rounded-xl flex items-center justify-center mb-4 text-xl group-hover:bg-sage-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-sage-700 mb-2">3. Dimensi Psikologis</h3>
+                    <p class="text-sm text-gray-600">Teknik pernapasan interaktif (Deep Breathing) dan relaksasi untuk menenangkan pikiran.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: INTRO & SKALA NYERI -->
+        <section id="tab-intro" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage-600 bg-sage-100 px-3 py-1 rounded-full">Edukasi Dasar</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-sage-700">Mengenal Nyeri Kanker & Meluruskannya</h2>
+                        <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                            Nyeri pada pasien kanker dapat berasal dari tumor itu sendiri, prosedur medis, atau pengobatan. Yang paling penting diingat: <strong>Nyeri kanker dapat dikendalikan dengan efektif</strong> jika dilaporkan dan ditangani sejak dini. Jangan menunggu sampai nyeri menjadi sangat parah.
+                        </p>
+                        <div class="bg-cream-50 p-4 rounded-2xl border border-sage-200">
+                            <h4 class="font-bold text-sage-700 text-sm mb-1"><i class="fa-solid fa-lightbulb text-warm-500 mr-2"></i> Mitos vs Fakta</h4>
+                            <p class="text-xs sm:text-sm text-gray-600"><strong>Mitos:</strong> Harus tahan rasa sakit agar obat tidak cepat kebal.<br><strong>Fakta:</strong> Minum obat pereda nyeri tepat waktu sesuai resep dokter menjaga kadar obat stabil dan efektif mencegah nyeri hebat, lalu menggunakan manajemen nyeri alternatif yang dapat dilakukan di rumah.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Edukasi Kesehatan" class="rounded-2xl shadow-sm w-full h-[260px] object-cover" onerror="this.src='https://placehold.co/600x400/E2EBE2/445D44?text=Edukasi+Kesehatan'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Pain Scale Section -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100 space-y-6">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <h3 class="text-2xl font-bold text-sage-700">Cek Skala Nyeri Anda Hari Ini</h3>
+                    <p class="text-sm text-gray-600">Pilih angka atau tingkat nyeri yang paling sesuai dengan yang Anda rasakan sekarang untuk membantu pelaporan kepada dokter.</p>
+                </div>
+
+                <!-- Pain Scale Buttons -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-11 gap-2 py-4" id="painScaleContainer">
+                    <!-- JS will populate or click handler -->
+                    <button onclick="selectPain(0)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none bg-sage-50 border-sage-500" data-level="0">
+                        <span class="block text-xl font-bold text-sage-700">0</span>
+                        <span class="block text-xs text-gray-500 mt-1">Tidak Nyeri</span>
+                    </button>
+                    <button onclick="selectPain(1)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="1">
+                        <span class="block text-xl font-bold text-sage-700">1</span>
+                        <span class="block text-xs text-gray-500 mt-1">Sangat Ringan</span>
+                    </button>
+                    <button onclick="selectPain(2)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="2">
+                        <span class="block text-xl font-bold text-sage-700">2</span>
+                        <span class="block text-xs text-gray-500 mt-1">Ringan</span>
+                    </button>
+                    <button onclick="selectPain(3)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="3">
+                        <span class="block text-xl font-bold text-sage-700">3</span>
+                        <span class="block text-xs text-gray-500 mt-1">Sedikit Mengganggu</span>
+                    </button>
+                    <button onclick="selectPain(4)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="4">
+                        <span class="block text-xl font-bold text-sage-700">4</span>
+                        <span class="block text-xs text-gray-500 mt-1">Cukup Mengganggu</span>
+                    </button>
+                    <button onclick="selectPain(5)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="5">
+                        <span class="block text-xl font-bold text-sage-700">5</span>
+                        <span class="block text-xs text-gray-500 mt-1">Sedang</span>
+                    </button>
+                    <button onclick="selectPain(6)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="6">
+                        <span class="block text-xl font-bold text-sage-700">6</span>
+                        <span class="block text-xs text-gray-500 mt-1">Agak Berat</span>
+                    </button>
+                    <button onclick="selectPain(7)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="7">
+                        <span class="block text-xl font-bold text-sage-700">7</span>
+                        <span class="block text-xs text-gray-500 mt-1">Berat</span>
+                    </button>
+                    <button onclick="selectPain(8)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="8">
+                        <span class="block text-xl font-bold text-sage-700">8</span>
+                        <span class="block text-xs text-gray-500 mt-1">Sangat Berat</span>
+                    </button>
+                    <button onclick="selectPain(9)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="9">
+                        <span class="block text-xl font-bold text-sage-700">9</span>
+                        <span class="block text-xs text-gray-500 mt-1">Luar Biasa</span>
+                    </button>
+                    <button onclick="selectPain(10)" class="pain-btn p-3 rounded-xl border border-sage-200 text-center transition hover:bg-sage-50 focus:outline-none" data-level="10">
+                        <span class="block text-xl font-bold text-red-600">10</span>
+                        <span class="block text-xs text-gray-500 mt-1">Tak Tertahankan</span>
+                    </button>
+                </div>
+
+                <!-- Pain Feedback Box -->
+                <div id="painFeedback" class="bg-sage-50 p-6 rounded-2xl border border-sage-200 text-center space-y-2">
+                    <h4 class="text-lg font-bold text-sage-700" id="feedbackTitle">Skala 0: Tidak Ada Nyeri</h4>
+                    <p class="text-sm text-gray-600" id="feedbackDesc">Kondisi Anda sangat baik saat ini. Pertahankan kenyamanan dan istirahat yang cukup.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: DIMENSI FISIK -->
+        <section id="tab-fisik" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100">
+                <div class="max-w-3xl space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-600 bg-sage-100 px-3 py-1 rounded-full">Manajemen Medis & Tubuh</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-sage-700">Dimensi Fisik: Kenyamanan & Kepatuhan</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Manajemen fisik berfokus pada pengendalian sumber nyeri medis melalui obat-obatan secara disiplin, dukungan posisi tubuh, serta teknik kenyamanan fisik harian.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <!-- Card 1 -->
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+                        <h3 class="font-bold text-sage-700 text-lg">Disiplin Obat (WHO Ladder)</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Minum obat pereda nyeri sesuai jadwal yang dianjurkan dokter, bukan hanya saat nyeri sudah tak tertahankan. Ini menjaga kadar obat efektif di dalam darah.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <h3 class="font-bold text-sage-700 text-lg">Posisi Tubuh Nyaman</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Gunakan bantal tambahan untuk menyangga bagian tubuh yang sakit atau tertekan. Ubah posisi tidur atau duduk secara berkala untuk mencegah kaku otot dan luka tekan.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-temperature-arrow-up"></i>
+                        </div>
+                        <h3 class="font-bold text-sage-700 text-lg">Kompres Hangat / Dingin</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Kompres hangat dapat melemaskan otot kaku, sementara kompres dingin membantu mengurangi peradangan atau nyeri tusuk (konsultasikan dulu dengan perawat/dokter Anda).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-sage-50 p-6 rounded-2xl border border-sage-200 flex flex-col sm:flex-row items-center gap-6">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80" alt="Perawatan Fisik" class="rounded-xl w-full sm:w-48 h-32 object-cover shadow-sm" onerror="this.src='https://placehold.co/300x200/E2EBE2/445D44?text=Kenyamanan'">
+                    <div class="space-y-2">
+                        <h4 class="font-bold text-sage-700 text-base">Catatan Mengatasi Efek Samping Obat</h4>
+                        <p class="text-xs sm:text-sm text-gray-600">
+                            Obat pereda nyeri tertentu (seperti golongan opioid) dapat menyebabkan konstipasi. Pastikan minum air putih cukup, konsumsi makanan berserat tinggi, dan komunikasikan jika mengalami mual atau sembelit kepada tim medis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: DIMENSI PSIKOLOGIS -->
+       <!-- TAB 4: PSIKOLOGIS -->
+        <section id="tab-psikologis" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100">
+                <div class="max-w-3xl space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-600 bg-sage-100 px-3 py-1 rounded-full">Ketenangan Pikiran & Emosi</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-sage-700">Dimensi Psikologis & Pernapasan</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Latihan pernapasan terarah membantu menenangkan sistem saraf dan mengurangi persepsi nyeri.
+                    </p>
+                </div>
+
+                <!-- Interactive Breathing Timer Widget -->
+                <div class="mt-8 bg-sage-50 rounded-3xl p-6 sm:p-10 border border-sage-200 text-center max-w-xl mx-auto space-y-6">
+                    <h3 class="text-xl font-bold text-sage-700">Pemandu Pernapasan Dalam</h3>
+                    <div class="relative w-48 h-48 mx-auto flex items-center justify-center">
+                        <div id="breathingCircle" class="absolute w-36 h-36 bg-sage-200 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center shadow-inner">
+                            <span id="breathingText" class="text-sage-700 font-bold text-lg">Siap?</span>
+                        </div>
+                    </div>
+                    <div id="breathingInstruction" class="text-base font-semibold text-sage-600 h-8">
+                        Tekan tombol Mulai di bawah untuk memulai latihan
+                    </div>
+                    <div class="flex justify-center gap-4 pt-2">
+                        <button onclick="startBreathing()" id="startBreathBtn" class="bg-sage-600 hover:bg-sage-700 text-white font-semibold px-6 py-2.5 rounded-xl shadow transition">Mulai Latihan</button>
+                        <button onclick="stopBreathing()" id="stopBreathBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-2.5 rounded-xl transition hidden">Berhenti</button>
+                    </div>
+                </div>
+
+                <!-- Bagian Grid Sejajar: Guided Imagery & Jurnal Emosi Nyeri -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    
+                    <!-- Kotak 1: Guided Imagery (Visualisasi) -->
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-4 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-sage-700 text-base flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-cloud-sun text-sage-600"></i> Guided Imagery (Visualisasi)
+                            </h4>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Tutup mata sejenak, bayangkan diri Anda berada di tempat yang paling menenangkan (seperti pantai berpasir lembut atau taman bunga yang sejuk). Rasakan kedamaiannya untuk mengalihkan fokus pikiran dari nyeri.
+                            </p>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://www.youtube.com/watch?v=2Sd2SWyzb3g" target="_blank" class="inline-flex items-center justify-center w-full gap-2 bg-sage-600 hover:bg-sage-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+                                <i class="fa-brands fa-youtube text-base"></i> Tonton Audio/Video Relaksasi
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kotak 2: Jurnal Emosi Nyeri -->
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-4 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-sage-700 text-base flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-book-journal-whills text-sage-600"></i> Jurnal Emosi Nyeri
+                            </h4>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                Catat kapan nyeri terasa paling berat dan apa yang Anda rasakan secara emosional saat itu. Menulis membantu melepaskan beban psikologis yang menumpuk di pikiran.
+                            </p>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://forms.gle/WZqtduuN6QGui5zv6" target="_blank" class="inline-flex items-center justify-center w-full gap-2 bg-sage-600 hover:bg-sage-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+                                <i class="fa-solid fa-pen-to-square text-base"></i> Buat Catatan Jurnal
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TAB 5: SOSIAL & GAYA HIDUP -->
+  <section id="tab-sosial" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100">
+                <div class="max-w-3xl space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-600 bg-sage-100 px-3 py-1 rounded-full">Dukungan Lingkungan</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-sage-700">Dimensi Sosial & Gaya Hidup</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Pengelolaan nyeri tidak bisa dilakukan sendirian. Keterlibatan keluarga, pengaturan energi harian, serta nutrisi yang baik sangat menentukan kualitas hidup Anda[cite: 6].
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-people-roof"></i></div>
+                        <h3 class="font-bold text-sage-700 text-lg">Peran Caregiver / Keluarga</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Libatkan keluarga terdekat dalam mencatat jadwal obat dan menemani saat konsultasi dokter. Dukungan emosional dari orang tercinta adalah obat penenang yang sangat kuat.</p>
+                    </div>
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-battery-half"></i></div>
+                        <h3 class="font-bold text-sage-700 text-lg">Konservasi Energi</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Jangan memaksakan diri melakukan semua pekerjaan sekaligus. Bagi aktivitas menjadi porsi kecil dan istirahatlah sebelum tubuh merasa kelelahan ekstrem (*fatigue*).</p>
+                    </div>
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-10 h-10 bg-sage-500 text-white rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-utensils"></i></div>
+                        <h3 class="font-bold text-sage-700 text-lg">Nutrisi & Hidrasi</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Konsumsi makanan bergizi seimbang dan cukup air putih untuk membantu tubuh melawan peradangan serta menjaga stamina sel-sel tubuh tetap optimal.</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <!-- Gambar diganti dengan foto suasana hangat / dukungan keluarga yang sopan -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80" alt="Dukungan Sosial dan Keluarga" class="rounded-2xl shadow-sm w-full h-[320px] object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 6: SPIRITUAL -->
+        <section id="tab-spiritual" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-sage-100">
+                <div class="max-w-3xl space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-sage-600 bg-sage-100 px-3 py-1 rounded-full">Kedamaian Batin & Refleksi</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-sage-700">Dimensi Spiritual: Ketenangan Jiwa</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Dimensi spiritual membantu pasien menemukan makna, kedamaian batin, dan kepasrahan yang menenangkan jiwa di tengah proses pengobatan yang sedang dijalani.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-12 h-12 bg-sage-100 text-sage-700 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-hands-praying"></i>
+                        </div>
+                        <h3 class="font-bold text-sage-700 text-lg">Doa, Meditasi, & Keyakinan</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Melakukan ibadah sesuai keyakinan masing-masing, berdoa, atau bermeditasi dapat menurunkan kadar hormon stres secara signifikan dan memberikan ketenangan batin yang mendalam.
+                        </p>
+                    </div>
+                    <div class="bg-cream-50 p-6 rounded-2xl border border-sage-200 space-y-3">
+                        <div class="w-12 h-12 bg-sage-100 text-sage-700 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="font-bold text-sage-700 text-lg">Penerimaan & Syukur Harian</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Mencatat 3 hal kecil yang disyukuri setiap hari membantu mengalihkan perhatian dari rasa sakit menuju hal-hal positif yang masih ada dalam hidup Anda.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-sage-50 p-6 rounded-2xl border border-sage-200 text-center space-y-3">
+                    <h4 class="font-bold text-sage-700 text-lg">Kutipan Refleksi Hari Ini</h4>
+                    <p class="text-sm italic text-gray-600 max-w-xl mx-auto">
+                        "Ketenangan bukanlah ketiadaan masalah, melainkan kemampuan untuk tetap merasa damai di tengah proses penyembuhan."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 7: RED FLAGS / DARURAT -->
+        <section id="tab-darurat" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-red-200">
+                <div class="max-w-3xl space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-100 px-3 py-1 rounded-full">Peringatan Medis Penting</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-red-700 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Kapan Harus Segera ke Rumah Sakit (Red Flags)
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Meskipun teknik *self-management* dapat dilakukan di rumah, ada kondisi tertentu di mana Anda atau keluarga harus segera menghubungi dokter atau membawanya ke Instalasi Gawat Darurat (IGD).
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-200 space-y-3">
+                        <div class="flex items-center gap-3 text-red-700 font-bold">
+                            <i class="fa-solid fa-circle-exclamation text-xl"></i>
+                            <h4>Nyeri Tiba-Tiba & Tak Tertahankan</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-600">
+                            Nyeri yang datang secara mendadak, jauh lebih parah dari biasanya, dan sama sekali tidak mereda meskipun sudah meminum obat pereda nyeri rutin sesuai jadwal.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-200 space-y-3">
+                        <div class="flex items-center gap-3 text-red-700 font-bold">
+                            <i class="fa-solid fa-temperature-high text-xl"></i>
+                            <h4>Nyeri Disertai Demam Tinggi</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-600">
+                            Nyeri yang disertai demam tinggi (suhu > 38°c) atau menggigil, yang bisa menjadi tanda infeksi serius.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-200 space-y-3">
+                        <div class="flex items-center gap-3 text-red-700 font-bold">
+                            <i class="fa-solid fa-bolt text-xl"></i>
+                            <h4>Kelemahan atau Mati Rasa Mendadak</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-600">
+                            Munculnya kelemahan mendadak pada tangan/kaki, kesulitan mengontrol buang air kecil/besar, atau mati rasa yang tidak biasa.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-200 space-y-3">
+                        <div class="flex items-center gap-3 text-red-700 font-bold">
+                            <i class="fa-solid fa-lungs text-xl"></i>
+                            <h4>Sesak Napas Berat</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-600">
+                            Nyeri dada yang disertai sesak napas berat, pusing berputar, atau kebingungan mendadak.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-red-600 text-white p-6 rounded-2xl shadow-md text-center space-y-2">
+                    <h3 class="text-lg font-bold">Jangan Menunggu Nyeri Menjadi Parah</h3>
+                    <p class="text-sm opacity-90">Selalu simpan nomor kontak dokter penanggung jawab atau layanan darurat rumah sakit Anda di tempat yang mudah diakses.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-sage-100 py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-xs sm:text-sm text-gray-500 space-y-2">
+            <p>Modul Digital Pain Self-Management Holistik untuk Pasien Kanker &bull; Dirancang untuk Kenyamanan & Kemandirian</p>
+            <p class="text-sage-600 font-medium">Selalu konsultasikan rencana manajemen nyeri Anda dengan tim dokter onkologi.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.add('hidden'));
+
+            // Show selected tab
+            const activeTab = document.getElementById('tab-' + tabId);
+            if (activeTab) {
+                activeTab.classList.remove('hidden');
+            }
+
+            // Update nav buttons style
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('bg-sage-500', 'text-white', 'shadow-sm');
+                btn.classList.add('text-sage-700', 'hover:bg-sage-100');
+            });
+
+            // Highlight current button
+            event && event.currentTarget && event.currentTarget.classList.add('bg-sage-500', 'text-white', 'shadow-sm');
+            event && event.currentTarget && event.currentTarget.classList.remove('text-sage-700', 'hover:bg-sage-100');
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Pain Scale Selection Logic
+        const painData = {
+            0: { title: "Skala 0: Tidak Ada Nyeri", desc: "Kondisi Anda sangat baik saat ini. Pertahankan kenyamanan dan istirahat yang cukup." },
+            1: { title: "Skala 1: Sangat Ringan", desc: "Nyeri hampir tidak terasa, seperti gigitan nyamuk kecil atau rasa pegal tipis." },
+            2: { title: "Skala 2: Nyeri Ringan", desc: "Nyeri terasa ringan sesekali, tidak mengganggu aktivitas harian Anda." },
+            3: { title: "Skala 3: Sedikit Mengganggu", desc: "Nyeri mulai terasa tetapi Anda masih dapat fokus pada aktivitas sehari-hari." },
+            4: { title: "Skala 4: Cukup Mengganggu", desc: "Nyeri cukup mengalihkan perhatian, namun masih dapat diatasi dengan relaksasi." },
+            5: { title: "Skala 5: Nyeri Sedang", desc: "Nyeri mulai membatasi beberapa aktivitas. Pertimbangkan posisi nyaman atau konsultasi obat." },
+            6: { title: "Skala 6: Nyeri Agak Berat", desc: "Nyeri sangat terasa dan mengganggu konsentrasi. Perlukan waktu istirahat total." },
+            7: { title: "Skala 7: Nyeri Berat", desc: "Nyeri mendominasi perasaan Anda, sulit tidur dan sulit beraktivitas." },
+            8: { title: "Skala 8: Nyeri Sangat Berat", desc: "Nyeri hebat yang membuat sulit berbicara atau berkonsentrasi penuh." },
+            9: { title: "Skala 9: Nyeri Luar Biasa", desc: "Nyeri sangat parah dan membuat Anda merasa lemas atau putus asa." },
+            10: { title: "Skala 10: Tak Tertahankan", desc: "Nyeri maksimal yang tidak tertahankan. Segera hubungi dokter atau darurat medis." }
+        };
+
+        function selectPain(level) {
+            // Update button styles
+            const buttons = document.querySelectorAll('.pain-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-sage-500', 'text-white', 'border-sage-500', 'shadow-sm');
+                const btnLevel = parseInt(btn.getAttribute('data-level'));
+                if(btnLevel === level) {
+                    btn.classList.add('bg-sage-500', 'text-white', 'border-sage-500', 'shadow-sm');
+                    // Change text colors inside active button
+                    btn.querySelector('span.text-sage-700, span.text-red-600')?.classList.add('text-white');
+                    btn.querySelector('span.text-gray-500')?.classList.add('text-cream-100');
+                } else {
+                    btn.querySelector('span:first-child')?.classList.remove('text-white');
+                    btn.querySelector('span:last-child')?.classList.remove('text-cream-100');
+                }
+            });
+
+            // Update Feedback
+            const titleEl = document.getElementById('feedbackTitle');
+            const descEl = document.getElementById('feedbackDesc');
+            if(painData[level]) {
+                titleEl.textContent = painData[level].title;
+                descEl.textContent = painData[level].desc;
+            }
+        }
+
+        // Breathing Timer Logic
+        let breathInterval = null;
+        const circle = document.getElementById('breathingCircle');
+        const breathText = document.getElementById('breathingText');
+        const instruction = document.getElementById('breathingInstruction');
+        const startBtn = document.getElementById('startBreathBtn');
+        const stopBtn = document.getElementById('stopBreathBtn');
+
+        function startBreathing() {
+            startBtn.classList.add('hidden');
+            stopBtn.classList.remove('hidden');
+
+            let phase = 0; // 0: Tarik (4s), 1: Tahan (4s), 2: Hembuskan (4s)
+
+            function runCycle() {
+                if (phase === 0) {
+                    instruction.textContent = "Tarik napas perlahan melalui hidung...";
+                    breathText.textContent = "Tarik";
+                    circle.style.transform = "scale(1.3)";
+                    circle.className = "absolute w-36 h-36 bg-sage-500 text-white rounded-full transition-all duration-[4000ms] ease-in-out flex items-center justify-center shadow-lg";
+                    phase = 1;
+                    breathInterval = setTimeout(runCycle, 4000);
+                } else if (phase === 1) {
+                    instruction.textContent = "Tahan napas sejenak dengan lembut...";
+                    breathText.textContent = "Tahan";
+                    phase = 2;
+                    breathInterval = setTimeout(runCycle, 4000);
+                } else if (phase === 2) {
+                    instruction.textContent = "Hembuskan perlahan lewat mulut...";
+                    breathText.textContent = "Hembus";
+                    circle.style.transform = "scale(1)";
+                    circle.className = "absolute w-36 h-36 bg-sage-200 text-sage-700 rounded-full transition-all duration-[4000ms] ease-in-out flex items-center justify-center shadow-inner";
+                    phase = 0;
+                    breathInterval = setTimeout(runCycle, 4000);
+                }
+            }
+
+            runCycle();
+        }
+
+        function stopBreathing() {
+            clearTimeout(breathInterval);
+            startBtn.classList.remove('hidden');
+            stopBtn.classList.add('hidden');
+            instruction.textContent = "Tekan tombol Mulai di bawah untuk memulai latihan";
+            breathText.textContent = "Siap?";
+            circle.style.transform = "scale(1)";
+            circle.className = "absolute w-36 h-36 bg-sage-200 text-sage-700 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center shadow-inner";
+        }
+    </script>
+</body>
+</html>
